@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Visit India</h1>
+        <ul class="list">
+            <li class="states">STATES
+                <select class="states_list">
+                    <option>Select a state</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                </select>
+                <span id="loadMore">More</span>
+                </li>
+
+            </span>
+            <li class="places">PLACES
+                <select name="Place" id="places_list" class="place_list">
+                    <option>Select a Place</option>
+                    <option>Taj Mahal</option>
+                    <option>Jaipur (Pink City)</option>
+                    <option>Varanasi (Benares)</option>
+                    <option>Goa (Beaches)</option>
+                    <option>Kerala (Backwaters)</option>
+                    <option>Mumbai (Bollywood)</option>
+                    <option>Delhi (Historic Sites)</option>
+                    <option>Leh-Ladakh (Scenic Beauty)</option>
+                    <option>Udaipur (City of Lakes)</option>
+                    <option>Rishikesh (Yoga Capital)</option>
+                    <option>Amritsar (Golden Temple)</option>
+                    <option>Khajuraho (Temples)</option>
+                    <option>Hampi (Historical Ruins)</option>
+                    <option>Mysore (Palaces)</option>
+                    <option>Shimla (Hill Station)</option>
+                    <option>Varanasi (Spiritual Hub)</option>
+                    <option>Kolkata (Cultural City)</option>
+                    <option>Andaman and Nicobar Islands</option>
+                    <option>Khajuraho (Erotic Temples)</option>
+                    <option>Pushkar (Camel Fair)</option>
+                    <option>Agra (Agra Fort)</option>
+                    <option>Mahabalipuram (Shore Temples)</option>
+                    <option>Rajasthan (Desert Safari)</option>
+                    <option>Darjeeling (Tea Plantations)</option>
+                    <option>Hyderabad (Charminar)</option>
+                    <option>Bengaluru (Tech Hub)</option>
+                    <option>Khajuraho (Kama Sutra Temples)</option>
+                    <option>Gulmarg (Skiing)</option>
+                    <option>Ooty (Hill Station)</option>
+
+                </select>
+            </li>
+            <li><a href="book.html">BOOK NOW</li></a>
+        </ul>
+    </nav>
+    <section class="text">
+        <h1 >India</h1>
+    <h2 >Vast culture and Tradition</h2>
+    </section>
+    <section>
+        <div class="container">
+            <div class="images">
+                <h1>Explore </h1>
+                <img src="img1.webp" alt="No images" >
+                <img src="img2.webp" alt="No images">
+                <img src="img3.jpg" alt="No images">
+                <img src="img4.png" alt="No images">
+                <img src="img5.jpeg" alt="No images">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // JavaScript for displaying additional items on "Load More" click
+        var statesList = document.querySelector('.states_list ul');
+        var loadMore = document.getElementById('loadMore');
+        var itemsPerPage = 5;
+        var visibleItems = itemsPerPage;
+
+        loadMore.addEventListener('click', function() {
+            var allItems = statesList.querySelectorAll('li');
+            for (var i = visibleItems; i < visibleItems + itemsPerPage; i++) {
+                if (allItems[i]) {
+                    allItems[i].style.display = 'block';
+                }
+            }
+            visibleItems += itemsPerPage;
+
+           
+            if (visibleItems >= allItems.length) {
+                loadMore.style.display = 'none';
+            }
+        });
+        var text = document.querySelector('.text');
+        var images = document.querySelector('.images');
+
+        text.addEventListener('mouseenter', function() {
+            text.style.display = 'none';
+            images.style.display = 'block';
+        });
+
+        text.addEventListener('mouseleave', function() {
+            text.style.display = 'block';
+            images.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
