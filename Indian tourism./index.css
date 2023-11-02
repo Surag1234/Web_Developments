@@ -1,0 +1,122 @@
+body{
+    background-image: url("Img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.navbar li {
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid white;
+    border-bottom-width: thin;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+}
+.states_list {
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.states:hover .states_list {
+    display: block;
+    visibility: inherit;
+}
+
+
+.states_list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.states_list li {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#loadMore {
+    visibility: hidden;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.place_list{
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.places:hover .place_list{
+    display: block;
+    visibility: inherit;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+section h1{
+    text-align: center;
+    color:white;
+    font-size: 100px;
+    padding: 10px;
+}
+section h2{
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 30px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.text {
+    text-align: center;
+    font-size: 24px;
+}
+ 
+
